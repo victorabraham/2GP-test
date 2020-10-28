@@ -1,0 +1,19 @@
+{
+  "orgName": "victorabraham company",
+  "edition": "Developer",
+  "features": [],
+  "namespace": "fmaobject",
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "securitySettings": {
+      "passwordPolicies": {
+        "enableSetPasswordInApi": true
+      }
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": false
+    }
+  }
+}
