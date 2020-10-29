@@ -4,8 +4,9 @@
             "path": "force-app",
             "default": true,
             "package": "fmaObjectTest",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT"
+            "versionName": "ver 0.2",
+            "versionNumber": "0.2.0.NEXT",
+            "ancestorId": "04t3h000004VSeMAAW"
         }
     ],
     "namespace": "fmaobject",

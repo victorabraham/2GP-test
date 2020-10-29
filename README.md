@@ -24,4 +24,6 @@ Checkout `second_version` branch and create second version of the package by run
 
 `sfdx force:package:version:create --package fmaObjectTest --installationkeybypass --definitionfile config/project-scratch-def.json --codecoverage --wait 10`
 
-You should see an error
+At the time of writing second version is failing with below error,
+
+`CostHub__c: Cannot modify managed object: entity=CustomEntityDefinition, component=01I0x000000YQBH, state=MANAGED_RELEASED, You can't reduce the visibility from Public to Protected for a released Custom Object.`
