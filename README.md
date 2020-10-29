@@ -1,18 +1,27 @@
 # Salesforce DX Project: Next Steps
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Repository to replicate issues caused by "Protected" custom object in 2GP.
 
-## How Do You Plan to Deploy Your Changes?
+## How to replicate
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+Create a namespace, link it to your devhub and replace `namespace` values in `sfdx-project.json` and `config/project-scratch-def.json` files
 
-## Configure Your Salesforce DX Project
+Create a package by running below command
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+`sfdx force:package:create --name fmaObjectTest --packagetype Managed --path force-app`
 
-## Read All About It
+Create first version of the package by running below command
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+`sfdx force:package:version:create --package fmaObjectTest --installationkeybypass --definitionfile config/project-scratch-def.json --codecoverage --wait 10`
+
+Promote first version of the package
+
+`sfdx force:package:version:promote --package FIRST_VERSION_ID_HERE --noprompt`
+
+Install the package in an environment.
+
+Create second version of the package by running below command
+
+`sfdx force:package:version:create --package fmaObjectTest --installationkeybypass --definitionfile config/project-scratch-def.json --codecoverage --wait 10`
+
+You should see an error
