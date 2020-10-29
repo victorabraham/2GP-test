@@ -13,6 +13,7 @@
     "sourceApiVersion": "50.0",
     "packageAliases": {
         "fmaObjectTest": "0Ho3h0000008OhJCAU",
-        "fmaObjectTest@0.1.0-1": "04t3h000004VSeHAAW"
+        "fmaObjectTest@0.1.0-1": "04t3h000004VSeHAAW",
+        "fmaObjectTest@0.1.0-2": "04t3h000004VSeMAAW"
     }
 }
